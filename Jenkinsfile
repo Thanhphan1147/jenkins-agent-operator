@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh'''#!/bin/bash
                     echo "$(hostname) $(date) : Running in $(pwd) as $(whoami)"
-                    tox -e lint
+                    /usr/bin/tox -e lint
                 '''
 
             }
@@ -24,7 +24,7 @@ pipeline {
             steps {
                 sh'''#!/bin/bash
                     echo "$(hostname) $(date) : Running in $(pwd) as $(whoami)"
-                    tox -e unit
+                    /usr/bin/tox -e unit
                 '''
 
             }
