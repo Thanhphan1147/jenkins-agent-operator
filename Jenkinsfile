@@ -7,7 +7,7 @@ pipeline {
 
     stages {
         stage('Lint') {
-            agent { label 'x86_64' }
+            agent { label 'machine' }
 
             steps {
                 sh'''#!/bin/bash
@@ -19,7 +19,7 @@ pipeline {
         }
 
         stage('Unit') {
-            agent { label 'x86_64' }
+            agent { label 'machine' }
 
             steps {
                 sh'''#!/bin/bash
