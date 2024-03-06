@@ -11,7 +11,7 @@ pipeline {
 
             steps {
                 sh'''#!/bin/bash
-                    echo "$(hostname) $(date) : Running in $(pwd)" > ${LOG_FILE_PATH}
+                    echo "$(hostname) $(date) : Running in $(pwd) as $(whoami)"
                     tox -e lint
                 '''
 
@@ -23,7 +23,7 @@ pipeline {
 
             steps {
                 sh'''#!/bin/bash
-                    echo "$(hostname) $(date) : Running in $(pwd)" > ${LOG_FILE_PATH}
+                    echo "$(hostname) $(date) : Running in $(pwd) as $(whoami)"
                     tox -e unit
                 '''
 
