@@ -7,7 +7,7 @@ pipeline {
 
     stages {
         stage('Lint') {
-            agent { label 'machine' }
+            agent { label 'k8s-0' }
 
             steps {
                 sh'''#!/bin/bash
@@ -19,7 +19,7 @@ pipeline {
         }
 
         stage('Unit') {
-            agent { label 'machine' }
+            agent { label 'k8s-0' }
 
             steps {
                 sh'''#!/bin/bash
