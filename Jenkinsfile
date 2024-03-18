@@ -12,7 +12,7 @@ pipeline {
             steps {
                 sh'''#!/bin/bash
                     echo "$(hostname) $(date) : Running in $(pwd) as $(whoami)"
-                    /usr/bin/tox -e lint
+                    /var/lib/pebble/default/.local/bin/tox -e lint
                 '''
 
             }
